@@ -5,7 +5,7 @@ from recipe_api import db, app
 @pytest.fixture
 def testing_client(scope='module'):
     db.create_all()
-    recipe = Recipe('Test Recipe', 'Test Ingredients', 'Test Steps', 5, True)
+    recipe = Recipe('Testing_Recipe', 'Testing_Ingredients', 'Testing_Steps', 5, True)
     db.session.add(recipe)
     db.session.commit()
 
