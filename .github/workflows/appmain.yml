@@ -54,7 +54,7 @@ jobs:
       DBUSER: postgres@jseijas-dbsrv.postgres.database.azure.com
       DBPASS: Pa$$w0rd1990
       DBHOST: jseijas-dbsrv.postgres.database.azure.com
-      DBNAME: jcasasus-assingment-prod-db
+      DBNAME: jcasasus-assignment-pro-db
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -74,7 +74,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       id: deploy-to-webapp
       with:
-        app-name: 'jcasasus-assingment-be-pro'
+        app-name: 'jcasasus-assignment-be-pro'
 
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
